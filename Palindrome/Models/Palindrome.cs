@@ -12,5 +12,10 @@ namespace Palindrome.Models
     {
       UserString = userInput;
     }
+
+    public void CleanString()
+    {
+      SanitizedString = UserString.ToLower().Replace(" ", "");
+    }
   }
 }

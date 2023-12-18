@@ -22,5 +22,16 @@ namespace Palindrome.Tests
       string result = newPalindrome.UserString;
       Assert.AreEqual(userInput, result);
     }
+
+    [TestMethod]
+    public void CleanString_CleansUserString_Void()
+    {
+      string userInput = "Race car";
+      PalindromeChecker newPalindrome = new PalindromeChecker(userInput);
+      newPalindrome.CleanString();
+      string result = newPalindrome.SanitizedString;
+      string cleanedString = "racecar";
+      Assert.AreEqual(cleanedString, result);
+    }
   }
 }
