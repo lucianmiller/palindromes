@@ -9,8 +9,18 @@ namespace Palindrome.Tests
     [TestMethod]
     public void PalindromeConstructor_CreatesInstanceOfPalindrome_Palindrome()
     {
-      PalindromeChecker newPalindrome = new PalindromeChecker();
+      string userInput = "Race car";
+      PalindromeChecker newPalindrome = new PalindromeChecker(userInput);
       Assert.AreEqual(typeof(PalindromeChecker), newPalindrome.GetType());
+    }
+
+    [TestMethod]
+    public void GetUserString_ReturnsUserString_String()
+    {
+      string userInput = "Race car";
+      PalindromeChecker newPalindrome = new PalindromeChecker(userInput);
+      string result = newPalindrome.UserString;
+      Assert.AreEqual(userInput, result);
     }
   }
 }

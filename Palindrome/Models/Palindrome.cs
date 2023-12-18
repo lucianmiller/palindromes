@@ -5,6 +5,11 @@ namespace Palindrome.Models
 {
   public class PalindromeChecker
   {
-    string UserString { get; set; }
+    public string UserString { get; set; }
+
+    public PalindromeChecker(string userInput)
+    {
+      UserString = userInput;
+    }
   }
 }
