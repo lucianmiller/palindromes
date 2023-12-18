@@ -3,8 +3,8 @@ using System;
 
 namespace Palindrome.Models
 {
-  public class Palindrome
+  public class PalindromeChecker
   {
-    
+    string UserString { get; set; }
   }
 }
